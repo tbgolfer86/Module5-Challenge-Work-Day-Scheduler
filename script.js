@@ -27,12 +27,9 @@ $('.time-block').each(function() {
   console.log("Current Hour:" + currentHour)
 });
 
-$(function () {
-
-  
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  
-  
+//gets user input from local storage and sets it to corresponding textarea elements
+$('.time-block').each(function () {
+  var timeBlock = $(this).attr("id");
+  var task = localStorage.getItem(timeBlock);
+  $(this).children('.description').val(task);
 });
