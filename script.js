@@ -14,6 +14,23 @@ saveButton.on('click', function() {
   localStorage.setItem(time, task);
 });
 
+//applies past, present, or future classes
+$('.time-block').each(function() {
+  var timeBlock = $(this).attr('id');
+  var currentHour = time.format('H');
+  if (timeBlock < currentHour) {
+    $(this).addClass('past');
+  }
+  if (timeBlock > currentHour) {
+    $(this).addClass('future');
+  }
+  if (timeBlock === currentHour) {
+    $(this).addClass('present');
+  }
+  console.log("Time Block:" + timeBlock)
+  console.log("Current Hour:" + currentHour)
+});
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
