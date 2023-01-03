@@ -13,4 +13,4 @@ This app runs in the browser. The user can click into a time block to enter an e
 https://tbgolfer86.github.io/Module5-Challenge-Work-Day-Scheduler/
 
 The screenshot below shows it open.
-![alt text](Screenshot%202023-01-02%20at%204.27.25%20PM.png)
+![alt text](Screenshot%202023-01-03%20at%2010.00.35%20AM.png)
