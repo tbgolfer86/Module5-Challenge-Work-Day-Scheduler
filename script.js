@@ -1,19 +1,19 @@
 //displays current date in header
-var time = dayjs();
-$('#currentDay').text(time.format('dddd, MMMM DD'));
+var dayjs = dayjs();
+$('#currentDay').text(dayjs.format('dddd, MMMM DD'));
 
 //event listener for clicking the save buttons
 var saveButton = $('.saveBtn');
 saveButton.on('click', function() {
-  var time = $(this).parent().attr('id');
-  var task = $(this).siblings('.description').val();
-  localStorage.setItem(time, task);
+  var hour = $(this).parent().attr('id');
+  var description = $(this).siblings('.description').val();
+  localStorage.setItem(hour, description);
 });
 
 //applies past, present, or future classes
 $('.time-block').each(function() {
   var timeBlock = $(this).attr('id');
-  var currentHour = time.format('H');
+  var currentHour = dayjs.format('H');
   if (timeBlock < currentHour) {
     $(this).addClass('past');
   }
@@ -29,7 +29,8 @@ $('.time-block').each(function() {
 
 //gets user input from local storage and sets it to corresponding textarea elements
 $('.time-block').each(function () {
-  var timeBlock = $(this).attr("id");
+  var timeBlock = $(this).attr('id');
   var task = localStorage.getItem(timeBlock);
   $(this).children('.description').val(task);
+  console.log(task);
 });
