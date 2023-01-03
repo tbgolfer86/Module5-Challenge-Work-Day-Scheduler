@@ -13,7 +13,7 @@ saveButton.on('click', function() {
 //applies past, present, or future classes
 $('.time-block').each(function() {
   var timeBlock = $(this).attr('id');
-  var currentHour = dayjs.format('H');
+  var currentHour = dayjs.format('HH');
   if (timeBlock < currentHour) {
     $(this).addClass('past');
   }
