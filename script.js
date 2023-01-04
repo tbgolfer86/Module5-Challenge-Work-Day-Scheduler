@@ -29,8 +29,8 @@ $('.time-block').each(function() {
 
 //gets user input from local storage and sets it to corresponding textarea elements
 $('.time-block').each(function () {
-  var timeBlock = $(this).attr('id');
-  var task = localStorage.getItem(timeBlock);
-  $(this).children('.description').val(task);
-  console.log(task);
+  var hour = $(this).attr('id');
+  var description = localStorage.getItem(hour);
+  $(this).children('.description').val(description);
+  console.log(description);
 });
