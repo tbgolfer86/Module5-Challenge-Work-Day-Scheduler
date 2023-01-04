@@ -10,6 +10,14 @@ saveButton.on('click', function() {
   localStorage.setItem(hour, description);
 });
 
+//gets user input from local storage and sets it to corresponding textarea elements
+$('.time-block').each(function () {
+  var hour = $(this).attr('id');
+  var description = localStorage.getItem(hour);
+  $(this).children('.description').val(description);
+  console.log(description);
+});
+
 //applies past, present, or future classes
 $('.time-block').each(function() {
   var timeBlock = $(this).attr('id');
@@ -27,10 +35,4 @@ $('.time-block').each(function() {
   console.log("Current Hour:" + currentHour)
 });
 
-//gets user input from local storage and sets it to corresponding textarea elements
-$('.time-block').each(function () {
-  var hour = $(this).attr('id');
-  var description = localStorage.getItem(hour);
-  $(this).children('.description').val(description);
-  console.log(description);
-});
+
