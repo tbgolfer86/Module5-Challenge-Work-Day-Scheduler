@@ -10,7 +10,7 @@ N/A
 
 This app runs in the browser. The user can click into a time block to enter an event and save it to local storage by clicking the save button for that time block. Each time block is color coded to indicate whether it is in the past, present, or future. 
 
-https://tbgolfer86.github.io/Module5-Challenge-Work-Day-Scheduler/
+https://tbgolfer86.github.io/Work-Day-Scheduler/
 
 The screenshot below shows it open.
 ![alt text](Screenshot%202023-01-03%20at%2010.00.35%20AM.png)
