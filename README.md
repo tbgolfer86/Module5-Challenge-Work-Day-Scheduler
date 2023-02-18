@@ -22,7 +22,7 @@
 ---
 
   ## Usage
-  This app runs in the browser. The user can click into a time block to enter an event and save it to local storage by clicking the save button for that time block. Each time block is color coded to indicate whether it is in the past, present, or future.<br>
+  This app runs in the browser. The user can click into a time block to enter an event and save it to local storage by clicking the save button for that time block. Each time block is color coded to indicate whether it is in the past, present, or future.<br><br>
   https://tbgolfer86.github.io/Work-Day-Scheduler/
 
   The screenshot below shows it open.
